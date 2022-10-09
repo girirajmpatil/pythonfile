@@ -1,8 +1,15 @@
-# Take a list of numbers
-my_list = [12, 65, 54, 39, 102, 339, 221,]
+ # Python program to display all the prime numbers within an interval
 
-# use anonymous function to filter
-result = list(filter(lambda x: (x % 13 == 0), my_list))
+lower = 900
+upper = 1000
 
-# display the result
-print("Numbers divisible by 13 are",result)
+print("Prime numbers between", lower, "and", upper, "are:")
+
+for num in range(lower, upper + 1):
+   # all prime numbers are greater than 1
+   if num > 1:
+       for i in range(2, num):
+           if (num % i) == 0:
+               break
+       else:
+           print(num)
